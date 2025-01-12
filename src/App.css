@@ -272,7 +272,8 @@ ul{
         order: 2;
         width: auto;
         height: auto;
-        margin: 0px 4%;
+        margin-top:0px;
+        margin-bottom:12px;
         padding: 10px;
       }
       .proceedure{
