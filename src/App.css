@@ -443,7 +443,7 @@ background-color: white;
         position: relative;
         margin-bottom: 0px;
       }
-}
+    }
   @media screen and (max-width:325px) {
   .mainbtn{
     font-size: 16px;
@@ -518,7 +518,7 @@ align-items:flex-start;
   margin-top:2vh;
   font-size:21px;
 }
-.app{
+.app1,.app2{
 width:9vw;
 position: absolute;
 height:6vh;
@@ -556,4 +556,107 @@ letter-spacing: 0.02em;
   padding:35px;
   line-height:31px;
 }
+@media screen and (max-width:435px) {
+.page2{
+  height:auto;
+  width:100vw;
+}
+.caregiver,.client{
+  height:45vh;
+  padding:15px;
+  background-size:90vw 45vh;
+}
+.caregiver,.client,.services p{
+  font-size: 15px;
+}
+.caregiverli li{
+ 
+    line-height: 21px;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    font-size: 16px;
+}
+
+.head{
+  font-size:19px;
+  line-height:30px;
+}
+.app1{
+  width:21vw;
+  height:5vh;
+  font-size:17px;
+  margin-left:30vw;
+  margin-top:3vh;
+}
+.app2{
+  width:21vw;
+  height:5vh;
+  font-size:17px;
+  margin-left:30vw;
+  margin-top:3vh;
+}
+.heada {
+  position: relative;
+  font-family: "Poppins", serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  top: 0vh;
+}
+.services{
+  height:43vh;
+  padding:20px;
+}
+.page2{
+  height:150vh;
+}
+}
+@media screen and (max-width:355px) {
+  .caregiver,.client{
+   padding:10px;
+   }
+   .heada {
+    font-size: 17px;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+    top: 0vh;
+  }
+.head {
+  font-size: 17px;
+  line-height: 30px;
+}
+.caregiver, .client, .services p {
+  font-size: 13px;
+}
+.app2 {
+  width: 16vw;
+  font-size: 12px;
+}
+.app1 {
+  width: 16vw;
+  font-size: 12px;
+}
+.caregiverli li{
+  font-size:13px;
+}
+}
+@media screen and (max-width:311px){
+  .head {
+    font-size: 15px;
+    line-height: 30px;
+}
+.services p {
+  font-size: 12px;
+}
+.heada {
+  font-size: 13px;
+  
+}
+.services{
+  height:50vh;
+}
+}
+
+
 

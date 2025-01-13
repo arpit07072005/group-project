@@ -56,7 +56,7 @@ export default function Page1() {
               <li>Professional Background Verification</li>
               <li>Fraud Prevention Measures </li>
             </ul>
-            <button className="app">Start</button>
+            <button className="app1">Start</button>
 
           </div>
           <div className="client">
@@ -67,7 +67,7 @@ export default function Page1() {
               <li>Negotiate Terms</li>
               <li>Flexible Engagements</li>
             </ul>
-            <button className="app">Browse</button>
+            <button className="app2">Browse</button>
 
           </div>
           <div className="services">
