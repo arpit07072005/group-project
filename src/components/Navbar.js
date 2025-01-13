@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <p>Care<span className="logo">Connect</span></p>
-      <ul>
+      <ul className="navli">
         <li>Home</li>
         <li>About Us</li>
         <li>Services</li>
