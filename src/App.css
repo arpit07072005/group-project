@@ -5,18 +5,19 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
+  list-style: none;
 }
 .App{
   height:auto;
   width:100%;
 }
 .navbar{
-  height:104px;
-  width:100%;
+  height:80px;
+  width:100vw;
   background: linear-gradient(to bottom,#B8DFE5E5 ,#FFFFFFCF );
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .navbar p{
 width: 208px;
@@ -39,19 +40,46 @@ color:rgb(93, 206, 237)
   height: 35px;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left:70px;
+  justify-content: center;
+  margin: 0px 10px;
+  gap:3%;
 }
 .navli li{
 list-style:none;
 font-family: "Outfit", serif;  
-font-size: 26px;
+font-size:clamp( 16px,1.7vw,40px);
 font-weight: 500;
-line-height: 35px;
+line-height: 15px;
 letter-spacing: 0.02em;
 color:rgba(0, 0, 0, 1);
-
+}
+.menu{
+  display: none;
+}
+.togglemenu{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  color:black;
+  background-color:rgba(97, 174, 185,0.9) ;
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 28px;
+  padding-top: 25px;
+}
+.closemenu{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background: transparent;
+}
+.menuclose{
+  display: none;
 }
 .mainbtn{
 width: 151px;
@@ -81,8 +109,9 @@ display: flex;
 
 }
 .johny{
-width: 638px;
-height:641px;
+    width: 550px;
+    height: 550px;
+    margin-top: 230px;
 border-top-left-radius: 50%;
 border-top-right-radius:50%;
 background-color: rgba(188, 221, 226,0.4);
@@ -90,7 +119,6 @@ border-bottom-left-radius:50%;
 border-bottom-right-radius:50%;
 border:5px solid rgba(255, 255, 255, 1);
 opacity:0.95px;
-margin-top:11%;
 box-shadow:inset 43.83px -43.83px 43.83px 0px rgba(143, 168, 172, 0.1) ; 
 box-shadow:inset -43.83px 43.83px 43.83px 0px rgba(255, 255, 255, 0.1) ;
 margin-right:-3%;
@@ -101,15 +129,15 @@ backdrop-filter: blur(7px);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  width: 438px;
-  height: 592px;
-  margin-top:-17%;
-  margin-left:12%;
+  width: 100%;
+  height: 100%;
+  margin-top: -22%;
+  margin-left: 10%;
   
 }
 .content{
-width: 722px;
-height: 382px;
+width: 50%;
+height: 82%;
 border-radius: 40px;
 opacity: 0.85;
 background-color: rgba(217, 217, 217, 0.1);
@@ -119,8 +147,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
-margin-top:10%;
-margin-left:5%;
+margin: 4% 4%;
 }
 .head{
   font-family: "Outfit", serif;   
@@ -131,6 +158,9 @@ letter-spacing: 0.1em;
 }
 .caregivers{
   color:#37BAF1;
+}
+p{
+  text-align: center;
 }
 .para p{
 font-family: "Outfit", serif;  
@@ -145,7 +175,6 @@ padding-left:7%;
 .proceedure{
 width:100%;
 height: 309px;
-/* background: linear-gradient(to bottom,rgba(255, 255, 255, 0.81),rgba(97, 174, 185, 1)); */
 background-color:rgba(97, 174, 185) ;
 opacity:0.84;
 backdrop-filter: blur(1px);
@@ -153,6 +182,8 @@ display: flex;
 align-items: center;
 justify-content: space-around;
 z-index: 300;
+gap: 10px;
+padding: 0px 10px;
 
 }
 .pchild{
@@ -167,7 +198,7 @@ justify-content: space-around;
 }
 .logo1{
   position: absolute;
-  margin-bottom:11%;
+  margin-bottom:11em;
   background-image:url(take-note_7977631.png) ;
   background-size:78px 58px;
  
@@ -199,7 +230,7 @@ text-align: center;
 }
 .logo2{
   position: absolute;
-  margin-bottom:12%;
+  margin-bottom:12em;
   background-image:url(group.png) ;
   background-size:68px 67px;
   padding-top:2%;
@@ -212,7 +243,7 @@ background-color: white;
 }
 .logo3{
   position: absolute;
-  margin-bottom:11%;
+  margin-bottom:11em;
   background-image:url(clipboard_10774456.png);
   background-size:68px 53px;
 
@@ -223,237 +254,393 @@ border-radius: 50%;
 background-color: white;
 
 }
-@media screen and (max-width:1442px) {
-   .navbar{
-    width:100vw;
-    height:104px;
+
+.page2{
+  min-height:120vh;
+  max-height:auto;
+  width:100vw;
+  background:linear-gradient(to top,rgba(255, 255, 255, 0.9),rgba(97, 174, 185));
+  opacity:0.84;
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-direction: column;
+}
+.caregiver{
+  min-height:40%;
+  width:90vw;
+  background-image:url(img3.png) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
+  border-radius: 40px;
+  padding:50px;
+}
+.head{
+  font-family: "Poppins", serif;  
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0.02em;
+}
+.heada{
+  position: relative;
+  font-family: "Poppins", serif;  
+  font-size:27px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 0.02em;
+  top:1vh;
+}
+.caregiver,.client,.services p{
+  font-family: "Poppins", serif;    
+font-size: 20px;
+font-weight: 500;
+letter-spacing: 0.02em;
+margin-bottom: 20px;
+}
+.caregiverli{
+  font-family: "Poppins", serif;    
+font-weight: 500;
+letter-spacing: 0.02em;
+display: flex;
+flex-direction: column;
+align-items:flex-start;
+}
+.caregiverli li{
+  line-height:27px;
+  margin-left:5vw;
+  margin-top:2vh;
+  font-size:21px;
+}
+.app1,.app2{
+width:110px;
+height:50px;
+border-radius: 12px;
+background-color: rgba(11, 182, 220, 1);
+color:white;
+margin-left:85%;
+background:inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+border:none;
+font-family: "Poppins", serif;    
+font-size: 25px;
+font-weight: 500;
+line-height: 37.5px;
+letter-spacing: 0.02em;
+margin-bottom: 10px;
+}
+.client{
+  min-height:40%;
+  width:90vw;
+  background-image:url(img4.png) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
+  border-radius: 40px;
+  padding:50px;
+}
+.services{
+  min-height:40%;
+  width:90vw;
+  background-image:url(img5.png) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
+  border-radius: 40px;
+  padding:35px;
+  line-height:31px;
+}
+ /* @media screen and (max-width:1442px) {
+  .navbar{
+   width:100vw;
+   height:80px;
+  }
+  .navli{
+   width:auto;
+   gap:3.5rem;
+  } .navli li{
+   font-size:1.5em;
+  }
+  .page1{
+  gap:3.5rem;
+  }
+ 
+  .procedure{
+   flex-wrap: wrap;
+  }
+}
+@media screen and (max-width:1365px) {
+   .navli{
+     margin-left:0px;
+   }
+   .navbar p{
+     width:auto;
+     font-size:28px;
+   }
+   .logo{
+     width:auto;
+     font-size:28px;
+   }
+   .navli li{
+     font-size:1.2rem;
    }
    .navli{
-    width:auto;
-    gap:3.5rem;
+     gap:2.5rem;
    }
-    .navli li{
-    font-size:1.5em;
+   .mainbtn{
+     width:120px;
+     font-size:19px;
    }
-   .content{
- 
-    height:auto;
-    padding:10px;
-    flex-wrap: wrap;
-    margin-bottom:20px;
+   .logo1{
+     
+     margin-bottom:190px;
    }
-   .page1{
-   gap:3.5rem;
+   .logo2{
+     
+     margin-bottom:190px;
    }
-   .johny{
-    height:80vh;
-    width:40vw;
-    margin-top:190px;
-    margin-right:-50px;
+   .logo3{
+     
+     margin-bottom:190px;
    }
-   .photo{
-    height:75vh;
-    width:30vw;
-   }
-   .procedure{
-    flex-wrap: wrap;
-   }
-   .pchild{
-    width:25vw;
-   }
-   
 }
 @media screen and (max-width:1365px) {
-    .navli{
-      margin-left:0px;
-    }
-    .navbar p{
-      width:auto;
-      font-size:28px;
-    }
-    .logo{
-      width:auto;
-      font-size:28px;
-    }
-    .navli li{
-      font-size:1.2rem;
-    }
-    .navli{
-      gap:2.5rem;
-    }
-    .mainbtn{
-      width:120px;
-      font-size:19px;
-    }
-    .logo1{
-      
-      margin-bottom:190px;
-    }
-    .logo2{
-      
-      margin-bottom:190px;
-    }
-    .logo3{
-      
-      margin-bottom:190px;
-    }
-}
-@media screen and (max-width:1365px) {
-  .johny {
-    height: 72vh;
-    width: 38vw;
-    margin-top:243px;
-    margin-right: -50px;
+ .johny {
+   height: 72vh;
+   width: 38vw;
+   margin-top:243px;
+   margin-right: -50px;
 }
 .photo{
-  width:32vw;
-  margin-left:3%;
+ width:32vw;
+ margin-left:3%;
 }
 }
 @media screen and (max-width:1043px){
-  .navli{
-    gap:1.2rem;
-  }
-  .navbar p{
-    width:auto;
-    font-size:24px;
-  }
-  .logo{
-    width:auto;
-    font-size:24px;
-  }
-  .mainbtn{
-    width:auto;
-    font-size:15px;
-    padding-right:0.5rem;
-    padding-left:0.5rem;
-  }
-  .johny {
-    height: 68vh;
-    width: 49vw;
-    margin-top: 243px;
-    margin-right: -50px;
+ .navli{
+   gap:1.2rem;
+ }
+ .navbar p{
+   width:auto;
+   font-size:24px;
+ }
+ .logo{
+   width:auto;
+   font-size:24px;
+ }
+ .mainbtn{
+   width:auto;
+   font-size:15px;
+   padding-right:0.5rem;
+   padding-left:0.5rem;
+ }
+ .johny {
+   height: 68vh;
+   width: 49vw;
+   margin-top: 243px;
+   margin-right: -50px;
 }
-  .photo{
-    width:35vw;
-    margin-left:10px;
-  }
+ .photo{
+   width:35vw;
+   margin-left:10px;
+ }
 }
 @media screen and (max-width:916px){
-  .photo {
-    width: 36vw;
-    margin-left: 5px;
+ .photo {
+   width: 36vw;
+   margin-left: 5px;
 }
 .johny {
-  height: 41vh;
-  width: 56vw;
-  margin-top: 358px;
-  margin-right: -56px;
+ height: 41vh;
+ width: 56vw;
+ margin-top: 358px;
+ margin-right: -56px;
 }
 .pchild p{
-  font-size:18px;
+ font-size:18px;
 }
 .logo3{
-  background-size: 61px 47px;
-  width: 61px;
-    height: 61px;
+ background-size: 61px 47px;
+ width: 61px;
+   height: 61px;
 }
 .logo2{
-  background-size: 61px 61px;
-  width: 61px;
-    height: 61px;
+ background-size: 61px 61px;
+ width: 61px;
+   height: 61px;
 }
-}
-
-@media screen and (max-width:435px) {
-.navbar{
-  height: 70px;
-  padding: 0px 5px;
-}
-.navli{
- display: none;
-}
-.mainbtn{
-  width: auto;
-  height: auto;
-  top:auto;
-  font-size: 16px;
-  padding: 0px 8px;
+} */ 
+@media screen and (max-width:770px){
+  .remove{
+    display: none;
   }
-  .navbar p{
-    width: auto;
+  .menu{
+    display: block;
+  }
+  .caregiver,.client,.services{
+    padding: 25px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .heada{
+    line-height: 35px;
+  }
+  .page1{
+    width:100vw;
     height:auto;
-    font-size: 16px;
+    background-size: cover;
+      flex-direction:column;
+      overflow:visible;
+      gap:0rem;
     }
-    .logo{  
-    font-size: 20px;
-    font-weight: 400;
-    line-height:normal;
+    .johny{
+      order: 1;
+      width: auto;
+      display: contents;
     }
-    .page1{
-      width:100vw;
-      height:auto;
+    .content{
+      order: 2;
+      width: auto;
+      height: auto;
+      margin-top:0px;
+      margin-bottom:12px;
+      padding: 10px;
+    }
+    .proceedure{
+      margin-top: -10px;
+      flex-direction: column;
+      height: auto;
+      gap: 20px;
+      padding: 20px 0px;
+    }
+    .pchild{
+      width: 48%;
+    }
+    .pchild h1{
+      margin-top: 0px;
+    }
+    .pchild p{
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .para p{
+      font-size: 18px;
+    }
+    .head p{
+      font-size: 25px;
+    }
+    .photo{
+      margin-left: 0px;
+      margin-top: 0px;
+      width: 400px;
+      height: 400px;
       background-size: cover;
-        flex-direction:column;
-        overflow:visible;
-        gap:0rem;
-      }
-      .johny{
-        order: 1;
-        width: auto;
-        display: contents;
-      }
-      .photo{
-        margin-left: 0px;
-        margin-top: 0px;
-        width: 300px;
-        height: 300px;
-        background-size: cover;
-        margin:auto;
-        position: static;
-      }
-      .content{
-        order: 2;
-        width: auto;
-        height: auto;
-        margin-top:0px;
-        margin-bottom:12px;
-        padding: 10px;
-      }
-      .proceedure{
-        margin-top: -10px;
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
-        padding: 20px 0px;
-      }
-      .pchild{
-        width: 80%;
-      }
-      .pchild h1{
-        margin-top: 0px;
-      }
-      .pchild p{
-        font-size: 16px;
-        line-height: 22px;
-      }
-      .para p{
-        font-size: 13px;
-      }
-      .logo1,.logo2,.logo3{
-        position: relative;
-        margin-bottom: 0px;
-      }
+      margin:auto;
+      position: static;
     }
-  @media screen and (max-width:325px) {
-  .mainbtn{
-    font-size: 16px;
-    padding: 0px 8px;
+    .logo1,.logo2,.logo3{
+      position: relative;
+      margin-bottom: 0px;
     }
-  .photo{
-        width: 230px;
-    height: 230px; 
+  
+    .app1,.app2{
+      margin-left: 75%;
+    }
   }
+@media screen and (max-width:435px) {
+
+   .page1{
+     width:100vw;
+     height:auto;
+     background-size: cover;
+       flex-direction:column;
+       overflow:visible;
+       gap:0rem;
+     }
+     .johny{
+       order: 1;
+       width: auto;
+       display: contents;
+     }
+     .photo{
+       margin-left: 0px;
+       margin-top: 0px;
+       width: 300px;
+       height: 300px;
+       background-size: cover;
+       margin:auto;
+       position: static;
+     }
+     .content{
+       order: 2;
+       width: auto;
+       height: auto;
+       margin-top:0px;
+       margin-bottom:12px;
+       padding: 10px;
+     }
+     .proceedure{
+       margin-top: -10px;
+       flex-direction: column;
+       height: auto;
+       gap: 20px;
+       padding: 20px 0px;
+     }
+     .pchild{
+       width: 80%;
+     }
+     .pchild h1{
+       margin-top: 0px;
+     }
+     .pchild p{
+       font-size: 16px;
+       line-height: 22px;
+     }
+     .para p{
+       font-size: 13px;
+     }
+     .logo1,.logo2,.logo3{
+       position: relative;
+       margin-bottom: 0px;
+     }
+   }
+   @media screen and (max-width:580px){
+    .navbar{
+      height: 70px;
+      padding: 0px 5px;
+     }
+     .navli{
+     display: none;
+     }
+     .mainbtn{
+      width: auto;
+      height: auto;
+      top:auto;
+      font-size: 16px;
+      padding: 0px 8px;
+      }
+      .navbar p{
+        width: auto;
+        height:auto;
+        font-size: 16px;
+        }
+        .logo{  
+        font-size: 20px;
+        font-weight: 400;
+        line-height:normal;
+        }
+  }
+ @media screen and (max-width:325px) {
+ .mainbtn{
+   font-size: 16px;
+   padding: 0px 8px;
+   }
+ .photo{
+       width: 230px;
+   height: 230px; 
+ }
 }
 
 
@@ -523,7 +710,7 @@ align-items:flex-start;
 }
 .app1,.app2{
 width:9vw;
-
+position: absolute;
 height:6vh;
 border-radius: 12px;
 background-color: rgba(11, 182, 220, 1);
@@ -552,7 +739,7 @@ letter-spacing: 0.02em;
   height:35vh;
   width:90vw;
   background-image:url(img5.png) ;
-  background-size: 90vw 35vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
   border-radius: 40px;
@@ -562,12 +749,9 @@ letter-spacing: 0.02em;
 @media screen and (max-width:435px) {
 .page2{
   height:auto;
-  width:100vw;
 }
 .caregiver,.client{
-  height:45vh;
   padding:15px;
-  background-size:90vw 45vh;
 }
 .caregiver,.client,.services p{
   font-size: 15px;
@@ -579,41 +763,35 @@ letter-spacing: 0.02em;
     margin-top: 2vh;
     font-size: 16px;
 }
-
 .head{
   font-size:19px;
   line-height:30px;
 }
 .app1{
-  width:21vw;
-  height:5vh;
+  width:100px;
+  height:50px;
   font-size:17px;
-  margin-left:30vw;
   margin-top:3vh;
 }
+.app1,.app2{
+  margin-left: 40%;
+}
 .app2{
-  width:21vw;
-  height:5vh;
+  width:100px;
+  height:50px;
   font-size:17px;
-  margin-left:30vw;
   margin-top:3vh;
 }
 .heada {
-  position: relative;
   font-family: "Poppins", serif;
   font-size: 19px;
   font-weight: 600;
   line-height: 14px;
   letter-spacing: 0.02em;
-  top: 0vh;
 }
 .services{
   height:43vh;
-  background-size:90vw 43vh;
   padding:20px;
-}
-.page2{
-  height:150vh;
 }
 }
 @media screen and (max-width:355px) {
@@ -626,6 +804,12 @@ letter-spacing: 0.02em;
     letter-spacing: 0.02em;
     top: 0vh;
   }
+  h1{
+    text-align: center;
+  }
+  .app1,.app2{
+    margin-left: 30%;
+  }
 .head {
   font-size: 17px;
   line-height: 30px;
@@ -633,14 +817,7 @@ letter-spacing: 0.02em;
 .caregiver, .client, .services p {
   font-size: 13px;
 }
-.app2 {
-  width: 16vw;
-  font-size: 12px;
-}
-.app1 {
-  width: 16vw;
-  font-size: 12px;
-}
+
 .caregiverli li{
   font-size:13px;
 }
@@ -650,234 +827,20 @@ letter-spacing: 0.02em;
     font-size: 15px;
     line-height: 30px;
 }
+.pchild{
+  width: 50%;
+}
 .services p {
   font-size: 12px;
 }
 .heada {
   font-size: 13px;
-  
+}
 }
 .services{
   height:50vh;
-  background-size:90vw 50vh;
 }
 }
-
-/* page3 css */
- .page3{
-  min-height:120vh;
-  max-height:auto;
-  width:100vw;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: space-evenly;
-  background:linear-gradient(to bottom,rgba(255, 255, 255, 0.9),rgba(97, 174, 185, 1));
-} 
-.parent1{
-  height:auto;
-  width:100vw;
-  display:flex;
-  align-items: center;
-  justify-content: center;
- 
-}
-.child1{
-  width:40vw;
-  height:570px;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-image:url(img6.png) ;
-  background-size:40vw 570px;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  box-shadow: inset 2px 2px 0px 0px;
-  padding:2%;
- 
-}
-.child2{
-  width:40vw;
-  height:570px;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-image:url(img7.png) ;
-  background-size:40vw 570px;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  box-shadow: inset 0px 2px 2px 0px;
-  padding-left:3%;
-
-}
-.child1 h1{
-font-family: "Poppins", serif;    
-font-size: 36px;
-font-weight: 600;
-letter-spacing: 0.02em;
-}
-.child2 h1{
-  font-family: "Poppins", serif;    
-font-size: 36px;
-font-weight: 600;
-letter-spacing: 0.02em;
-
-}
-.child2 p{
-  font-family: "Poppins", serif;   
-font-size: 22px;
-font-weight: 500;
-letter-spacing: 0.02em;
-}
-.heading{
-display:inline;
-font-family: "Poppins", serif;     
-font-size: 22px;
-font-weight: 700;
-letter-spacing: 0.02em;
-}
-.child1 p{
-font-family: "Poppins", serif;   
-font-size: 22px;
-font-weight: 500;
-letter-spacing: 0.02em;
-}
-.feedback{
-  width:81vw;
-  min-height:220px;
-  max-height:300px;
-  border-radius:40px;
-  background-color: rgba(196, 196, 196, 0.28);
-  box-shadow: 
-   inset -18.6px 18.6px 18.6px rgba(255, 255, 255, 0.1),
-   inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1); 
-   display:flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-}
-.policy{
-  width:60%;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
- .feedback .policy p{
-font-family: "Poppins", serif;   
-font-size: 20px;
-font-weight: 400;
-letter-spacing: 0.1em;
-color:white;
-padding-right:5%;
-}
-.email{
-font-family: "Poppins", serif;    
-font-size: 20px;
-font-weight: 400;
-letter-spacing: 0.02em;
-color:black;
-}
-.feedback p{
-font-family: "Poppins", serif;     
-font-size: 20px;
-font-weight: 400;
-letter-spacing: 0.02em;
-color:white;
-}
-.query{
-font-family: "Poppins", serif;    
-font-size: 23px;
-font-weight: 600;
-letter-spacing: 0.03em;
-color:white;
-}
-input{
-  width:290px;
-  height:30px;
-  background-color: white;
-  border:none;
-  font-size:85%;
-  border-radius:10px;
-  padding-left:8%;
-  padding-right: 8%;
-}
-.sub{
- width:85px;
- height:30px;
- font-family: "Poppins", serif; 
-font-size:85%;
-font-weight: 500;
-color:white;
-background-color: black;
-border-radius: 12px;
-letter-spacing: 0.03em;
-
-}
-.inpsub{
-  width:100%;
-  height:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-@media screen and (max-width:700px){
-  .child1 h1,.child2 h1{
-    font-size: 26px;
-  }
-  .heading{
-    font-size:20px;
-  }
-  .child1 p,.child2 p{
-    font-size:18px;
-  }
-  .feedback .policy p {
-    font-size: 17px;
-    padding-right:0%;
-  }
-  .policy{
-    width:90%;
-  }
-  
-
-}
-@media screen and (max-width:450px){
-  .child1 h1,.child2 h1{
-    font-size: 21px;
-  }
-  .heading{
-    font-size:17px;
-  }
-  .child1 p,.child2 p{
-    font-size:15px;
-  }
-  .feedback p,.email,.query{
-    font-size: 17px;
-  }
-  input{
-    width:140px;
-    padding:0%;
-  }
-}
-@media screen and (max-width:359px){
-  .heading{
-    font-size:15px;
-  }
-  .child1 p,.child2 p{
-    font-size:13px;
-  }
-  .feedback p,.email,.query{
-    font-size: 13px;
-  }
-  .feedback .policy p {
-    font-size: 14px;
-    
-  }
-}
-
-
-
 
 
 
