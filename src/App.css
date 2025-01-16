@@ -854,7 +854,7 @@ letter-spacing: 0.03em;
   min-height:80vh;
   max-height: auto;
   width:100vw;
-  background:linear-gradient(to top,rgba(255, 255, 255, 0.9), rgba(97, 174, 185, 1));
+  background:linear-gradient(to top, rgba(159, 209, 222, 0.6), rgba(97, 174, 185, 1));
   display:flex;
   align-items:center;
   justify-content:space-around;
@@ -1008,6 +1008,82 @@ color:(0, 0, 0, 1);
 .whole .settext, .settext1, .settext2, .settext3, .settext4{
   font-size:11px;
 }
+}
+
+
+/* page5 css */
+.page5{
+  min-height:80vh;
+  width:100vw;
+  background-image:url(img9.png) ;
+  background-size:100% 100%;
+  display:flex;
+ padding-left:50px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom:20px;
+  
+}
+.page5 h3{
+font-family: "Poppins", serif;      
+font-size: 48px;
+font-weight: 600;
+
+text-decoration-line: underline;
+
+}
+.articles{
+  min-height:170px;
+  width:70%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+.suggest{
+  min-height:62px;
+  width:100%;
+  background-color: rgba(149, 215, 225, 1);
+  opacity: 90%;
+  border-radius:16px;
+  font-family: "Poppins", serif;    
+font-size: 24px;
+font-weight: 700;
+color:rgba(0,0,0,1);
+padding:10px 10px 10px 30px;
+}
+.pull{
+  min-height:120px;
+  width:100%;
+  background-color: rgba(149, 184, 189, 1);
+  border-radius:16px;
+  font-family: "Poppins", serif;    
+font-size: 20px;
+font-weight:500;
+padding:10px 10px 10px 30px;
+
+
+}
+@media screen and (max-width:700px){
+  .articles{
+    width:90%
+  }
+  .page5 h3{
+    font-size:40px;
+    text-align: center;
+  }
+}
+@media screen and (max-width:450px){
+  .page5 h3{
+    font-size:32px;
+  }
+  .suggest{
+    font-size:17px;
+  }
+  .pull{
+    font-size:15px;
+  }
 }
 
 
