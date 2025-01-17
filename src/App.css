@@ -997,6 +997,30 @@ color:(0, 0, 0, 1);
   }
  
 }
+@media screen and (max-width:650px){
+  .img{
+    height:60%
+  }
+   .img img{
+    height:100%;
+  } 
+   .page4{
+    flex-direction: column;
+    justify-content: center;
+   }
+  .faq{
+    width:90%;
+   
+  }
+  .mainq{
+    font-size:15px;
+  }
+  .faq h5{
+    font-size:22px;
+    text-decoration: underline;
+  }
+
+}
 @media screen and (max-width:450px){
 .faq h5{
   font-size:20px;
