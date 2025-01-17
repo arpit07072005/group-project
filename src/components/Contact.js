@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import emailjs from "emailjs-com"
 
 export default function Contact() {
+    const [status, setStatus] = useState("");
     const[name,setName]=useState("Full Name")
     const[email,setEmail]=useState("Email Address")
     const[message,setMessage]=useState("Enter your Message Here")
+    const[robot,setRobot]=useState(false)
+    console.log(status)
 
     const handlename=(e)=>{
         setName(e.target.value)
@@ -25,10 +29,42 @@ export default function Contact() {
             setMessage("");
         }
     }
+    const handlerobo=(e)=>{
+       setRobot(e.target.checked)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .send(
+            "service_4r3d0ha", // Replace with your EmailJS Service ID
+            "template_heuei0i", // Replace with your EmailJS Template ID
+            {
+                name,              // Passing individual fields
+                email,
+                message,
+              },
+            "R_SWFGG_XmrW_H6yx" // Replace with your EmailJS Public User ID
+          )
+          .then(
+            (response) => {
+              console.log("SUCCESS!", response.status, response.text);
+              setStatus("Email sent successfully!");
+            },
+            (error) => {
+              console.error("FAILED...", error);
+              setStatus("Failed to send email. Please try again later.");
+            }
+          );
+          setName("")
+          setEmail("")
+          setMessage("")
+          setRobot(false)
+        }
   return (
-    <div className="page6">
+    <div className="page6" id="contactus">
       <h4>CONTACT US</h4>
-      <div className="contactimg">
+      <div className="contactimg" >
         <div className="contactform">
             <p>If you have any queries, drop them here</p>
             <span className="inputfield">
@@ -43,8 +79,8 @@ export default function Contact() {
             </span>
             <label htmlFor="message">Message</label>
             <input type="text" value={message} name="message" onChange={handlemssg} onClick={handleClick} className="mssg"/>
-            <span className="checkbox"><input type="checkbox" name="robot" value="robot" placeholder="I'm not a robot"/>I'm not a robot</span>
-            <button className="send">Send</button>
+            <span className="checkbox"><input type="checkbox" name="robot" checked={robot} placeholder="I'm not a robot" onChange ={handlerobo}/>I'm not a robot</span>
+            <button className="send" onClick={handleSubmit}>Send</button>
 
         </div>
         <div className="childimg">

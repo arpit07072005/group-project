@@ -18,9 +18,9 @@ const handlemenuclose=()=>{
       <ul className="navli remove">
        <Link to="/"><li>Home</li></Link> 
        <a href ="#page2"> <li>About Us</li></a>
-       <a href="#page2"> <li>Services</li></a>
+       <a href="#page2service"> <li>Services</li></a>
        <a href ="#page3"> <li>Testimonials</li></a>
-        <li>Contact Us</li>
+      <a href="#contactus"><li>Contact Us</li></a>
 
       </ul>
       <button className="mainbtn">FindCare</button>
@@ -29,11 +29,11 @@ const handlemenuclose=()=>{
     </div>
     <div className={`${menuopen?'togglemenu':'menuclose'}`}>
     <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Services</li>
-        <li>Testimonials</li>
-        <li>Contact Us</li>
+    <Link to="/"><li>Home</li></Link>
+    <a href ="#page2"><li>About Us</li></a>
+    <a href="#page2service"><li>Services</li></a>
+      <a href="#page3"><li>Testimonials</li></a> 
+      <a href="#contactus"><li>Contact Us</li></a>
       </ul>
       <button className="closemenu"onClick={handlemenuclose}><CloseIcon/></button>
     </div>

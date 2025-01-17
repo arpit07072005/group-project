@@ -3,8 +3,8 @@ import { Link } from 'react-router'
 
 export default function Page2() {
   return (
-    <div className="page2" id="page2">
-    <div className="caregiver">
+    <div className="page2" >
+    <div className="caregiver" id="page2">
       <span className="head">Became a Caregiver</span>
       <p>Join our platform and make a difference in someoen's life.</p>
       <ul className="caregiverli">
@@ -26,7 +26,7 @@ export default function Page2() {
       <button className="app2">Browse</button>
 
     </div>
-    <div className="services">
+    <div className="services" id="page2service">
     <span className="head">Our Services</span>
     <p>Full-Time Caretaking Assistance</p>
     <p>Round-the-clock, 24/7 care tailored to the clients's needs.</p>
