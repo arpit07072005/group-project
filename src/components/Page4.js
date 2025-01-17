@@ -39,35 +39,35 @@ export default function Process() {
         <div className="whole">
         <span className="answer">
         <p className="mainq">How do I become a caregiver ?</p>
-        <span className="vector" onClick={handleClick}><img src="./img8.png" alt="vector"/></span> </span>
+        <span className={text?"vector":"setvector"} onClick={handleClick}><img src="./img8.png" alt="vector"/></span> </span>
         <p className={text?"text":"settext"}>To become a caregiver , click on the “Become a Caregiver” button and follow the registration process.</p> 
        
         </div>
         <div className="whole">
         <span className="answer">
         <p className="mainq">What types of services can i request ?</p>
-        <span className="vector"  onClick={handleClick1}><img src="./img8.png" alt="vector"/></span>
+        <span className={text1?"vector":"setvector"}   onClick={handleClick1}><img src="./img8.png" alt="vector"/></span>
         </span>
         <p className={text1?"text":"settext1"}>To become a caregiver , click on the “Become a Caregiver” button and follow the registration process.</p> 
         </div>
         <div className="whole">
         <span className="answer">
         <p className="mainq">How are caregivers verified ?</p>
-        <span className="vector"  onClick={handleClick2} ><img src="./img8.png" alt="vector"/></span>
+        <span className={text2?"vector":"setvector"}  onClick={handleClick2} ><img src="./img8.png" alt="vector"/></span>
         </span>
         <p className={text2?"text":"settext2"}>To become a caregiver , click on the “Become a Caregiver” button and follow the registration process.</p> 
         </div>
         <div className="whole">
         <span className="answer">
         <p className="mainq">How do I become a  caregiver ?</p>
-        <span className="vector" onClick={handleClick3} ><img src="./img8.png" alt="vector"/></span>
+        <span className={text3?"vector":"setvector"}  onClick={handleClick3} ><img src="./img8.png" alt="vector"/></span>
         </span>
         <p className={text3?"text":"settext3"}>To become a caregiver , click on the “Become a Caregiver” button and follow the registration process.</p> 
         </div>
         <div className="whole">
         <span className="answer">
         <p className="mainq">How are caregivers verified ?</p>
-        <span className="vector" onClick={handleClick4} ><img src="./img8.png" alt="vector"/></span>
+        <span className={text4?"vector":"setvector"}  onClick={handleClick4} ><img src="./img8.png" alt="vector"/></span>
        </span>
        <p className={text4?"text":"settext4"}>To become a caregiver , click on the “Become a Caregiver” button and follow the registration process.</p> 
        </div>

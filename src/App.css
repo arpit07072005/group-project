@@ -104,8 +104,8 @@ border:none;
 width:100vw;
 height: 622px;
 background-image:url(tryimage.png) ;
-background-size:cover;
-background-repeat: no-repeat;
+background-size:100% 100%;
+background-position: center;
 display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -275,9 +275,8 @@ background-color: white;
   min-height:40%;
   width:90vw;
   background-image:url(img3.png) ;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
-  background-repeat: no-repeat;
   background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
   border-radius: 40px;
   padding:50px;
@@ -340,9 +339,8 @@ margin-bottom: 10px;
   min-height:40%;
   width:90vw;
   background-image:url(img4.png) ;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
-  background-repeat: no-repeat;
   background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
   border-radius: 40px;
   padding:50px;
@@ -352,9 +350,8 @@ margin-bottom: 10px;
   min-height:40%;
   width:90vw;
   background-image:url(img5.png) ;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
-  background-repeat: no-repeat;
   background:inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);
   border-radius: 40px;
   padding:35px;
@@ -371,6 +368,7 @@ margin-bottom: 10px;
   }
   .caregiver,.client,.services{
     padding: 25px;
+    background-size: 100% 100%;
     
   }
   p{
@@ -382,7 +380,7 @@ margin-bottom: 10px;
   .page1{
     width:100vw;
     height:auto;
-    background-size: cover;
+    background-size: 100% 100%;
       flex-direction:column;
       overflow:visible;
       gap:0rem;
@@ -446,7 +444,7 @@ margin-bottom: 10px;
    .page1{
      width:100vw;
      height:auto;
-     background-size: cover;
+     background-size:100% 100%;
        flex-direction:column;
        overflow:visible;
        gap:0rem;
@@ -540,6 +538,7 @@ margin-bottom: 10px;
 }
 .caregiver,.client{
   padding:15px;
+  background-size: 100% 100%;
 }
 .caregiver,.client,.services p{
   font-size: 15px;
@@ -579,11 +578,13 @@ margin-bottom: 10px;
 }
 .services{
   padding:20px;
+  background-size: 100% 100%;
 }
 }
 @media screen and (max-width:355px) {
   .caregiver,.client{
    padding:10px;
+   background-size: 100% 100%;
    }
    .heada {
     font-size: 17px;
@@ -607,6 +608,9 @@ margin-bottom: 10px;
 
 .caregiverli li{
   font-size:13px;
+}
+.services{
+  background-size: 100% 100%;
 }
 }
 @media screen and (max-width:311px){
@@ -634,7 +638,7 @@ margin-bottom: 10px;
 /* page3 css */
 .page3{
 
-  min-height:120vh;
+  min-height:80vh;
   max-height:auto;
   width:100vw;
   display: flex;
@@ -642,6 +646,7 @@ margin-bottom: 10px;
   align-items: center;
   justify-content: space-evenly;
   background:linear-gradient(to bottom,rgba(255, 255, 255, 0.9),rgba(97, 174, 185, 1));
+  padding:100px;
 } 
 .parent1{
   height:auto;
@@ -661,9 +666,9 @@ margin-bottom: 10px;
   background-size:40vw 570px;
   background-repeat: no-repeat;
   border-radius: 40px;
-  box-shadow: inset 2px 2px 0px 0px;
+  box-shadow: inset 0px 2px 2px 0px;
   padding:2%;
- 
+
 }
 .child2{
   width:40vw;
@@ -712,6 +717,7 @@ font-weight: 500;
 letter-spacing: 0.02em;
 }
 .feedback{
+  display: none;
   width:81vw;
   min-height:220px;
   max-height:300px;
@@ -720,10 +726,10 @@ letter-spacing: 0.02em;
   /* box-shadow: 
    inset -18.6px 18.6px 18.6px rgba(255, 255, 255, 0.1),
    inset 18.6px -18.6px 18.6px rgba(165, 165, 165, 0.1);  */
-   display:flex;
-   flex-direction: column;
+   /* display:flex; */
+   /* flex-direction: column;
    justify-content: space-around;
-   align-items: center;
+   align-items: center; */
    box-shadow: inset 2px 2px 2px 0px,
   inset -2px -2px 2px 0px;
 }
@@ -875,8 +881,8 @@ letter-spacing: 0.03em;
   min-height:520px;
   min-height:auto;
   background-color: rgb(129, 209, 222);
-  box-shadow: inset 2px 2px 4px 1px,
-  inset -2px -2px 4px 1px;
+  box-shadow: inset 2px 2px 1px 1px,
+  inset -2px -2px 1px 1px;
   border-radius:50px;
   display: flex;
   flex-direction: column;
@@ -936,7 +942,21 @@ color:(0, 0, 0, 1);
   align-items: center;
   padding-left:1.5%;
   opacity:77%;
+  transform:rotateX(-180deg);
+  transition: transform 0.3s ease;
   
+}
+.setvector{
+  height:35px;
+  width:8%;
+  border-radius: 50%;
+  background-color: #37BAF1;
+  display:flex;
+  align-items: center;
+  padding-left:1.5%;
+  opacity:77%;
+  transform:rotateX(180deg);
+  transition: transform 0.3s ease;
 }
 .faq .questions img{
   height:50%;
@@ -1027,7 +1047,7 @@ color:(0, 0, 0, 1);
   text-decoration: none;
 }
 .mainq{
-  font-size:12px;
+  font-size:14px;
 }
 .whole .settext, .settext1, .settext2, .settext3, .settext4{
   font-size:11px;
@@ -1109,6 +1129,185 @@ padding:10px 10px 10px 30px;
     font-size:15px;
   }
 }
+
+/* Contact us page css with footer */
+
+.page6{
+  width:100vw;
+  min-height:30vh;
+  background:linear-gradient(to top,rgba(63, 82, 83, 0.97),rgba(189, 223, 231, 1));
+  display:flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.page6 h4{
+  font-family: "Poppins", serif;    
+font-size: 44px;
+font-weight: 600;
+display:inline-block;
+text-align: center;
+text-decoration-line: underline;
+
+
+}
+.contactimg{
+  width:100%;
+  min-height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.contactform{
+  width:55%;
+  min-height:450px;
+  display:flex;
+  flex-direction:column;
+  /* align-items: center; */
+  padding-left:80px;
+  
+  justify-content: space-around;
+}
+.childimg{
+  width:45%;
+  height:529px;
+  margin-top:-66px;
+
+}
+.childimg img{
+  width:100%;
+  height:100%;
+}
+.inputfield{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: center;
+}
+.inputfield1,.inputfield2{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", serif;     
+font-size: 16px;
+font-weight: 400;
+color:rgba(255, 255, 255, 1);
+min-height:70px;
+width:50%;
+}
+.inputfield1 input,.inputfield2 input{
+width:80%;
+min-height: 35px;
+border-radius: 10px;
+font-family: "Poppins", serif;     
+font-size: 16px;
+font-weight: 500;
+border:2px solid black;
+}
+.contactform p{
+  font-family: "Poppins", serif;     
+font-size: 16px;
+font-weight: 700;
+color:rgba(255, 255, 255, 1);
+}
+.contactform label{
+  font-size: 16px;
+font-weight: 400;
+color:rgba(255, 255, 255, 1);
+}
+.checkbox{
+  font-family: "Poppins", serif;  
+font-size: 18px;
+font-weight: 500;
+color:rgba(0, 0, 0, 1);
+width:50%;
+min-height:73px;
+background-color: white;
+display:flex;
+align-items:center;
+justify-content: space-evenly;
+border-radius:10px;
+border:2px solid black;
+}
+.checkbox input{
+  width: 10%;
+  height:30px;
+  border:20px solid black;
+}
+.send{
+  font-family: "Poppins", serif;   
+font-size: 18px;
+font-weight: 500;
+color:rgba(0, 0, 0, 1);
+min-height:51px;
+width:30%;
+border-radius:10px;
+}
+.mssg{
+width:85%;
+height: 80px;
+border-radius: 10px ;
+font-family: "Poppins", serif;     
+font-size: 16px;
+font-weight: 500;
+border:2px solid black;
+}
+@media screen and (max-width:810px){
+.contactform{
+  padding-left:30px;
+}
+}
+@media screen and (max-width:650px){
+ .childimg{
+  display:none;
+ }
+ .contactform{
+  width:90%;
+  background-image:url(../public/contact.png) ;
+  background-size: 100% 100%;
+  background-position: center;
+ }
+}
+@media screen and (max-width:425px){
+.contactform{
+  width:100%;
+}
+.page6 h4{
+  font-size:33px;
+}
+.inputfield1 input, .inputfield2 input{
+  width:85%;
+  padding-left:10px;
+}
+.mssg{
+  padding-left:10px;
+}
+.checkbox input{
+  width:8%;
+}
+.checkbox{
+  font-size:15px;
+}
+.send{
+  font-size:15px;
+}
+}
+@media screen and (max-width:330px){
+  .inputfield1 input, .inputfield2 input,.checkbox,.send,.mssg{
+    font-size:13px;
+  }
+  .contactform p{
+    font-size:15px;
+  }
+
+}
+
+
+
+
+
+
 
 
 
