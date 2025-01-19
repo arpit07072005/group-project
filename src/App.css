@@ -1318,7 +1318,7 @@ border:2px solid black;
 }
  .careimage{
   width:40%;
-  min-height:729px;
+  min-height:750px;
   background-image:url(../public/img10.png) ;
   background-size: 100% 100%;
   background-position: center;
@@ -1332,7 +1332,7 @@ border:2px solid black;
 }
 .formimage{
   width:59.8%;
-  min-height:729px;
+  min-height:750px;
   background-image:url(../public/img12.png) ;
   background-size: 100% 100%;
   background-position: center;
@@ -1377,25 +1377,40 @@ background:linear-gradient(rgba(197, 255, 255, 1),rgba(108, 191, 191, 1),rgba(64
   font-size: 54px;
   font-weight: 700;
   color:rgba(0,0,0,1);
-  animation:slide 4s linear infinite;
-  animation-delay:1ms;
+  animation:slide 6s  infinite;
+  
 } 
 @keyframes slide{
   0%{
     transform:translatey(0);
 
   }
-  100%{
-    transform: translatey(-205%);
+  33.33% {
+    transform: translateY(0); /* Hold first span */
   }
+  50% {
+    transform: translateY(-100%); /* Move to second span */
+  }
+  83.33% {
+    transform: translateY(-100%); /* Hold second span */
+  }
+  100% {
+    transform: translateY(-200%); /* Move to third span */
+  }
+ 
 }
 form{
   width:90%;
-  min-height:700px;
+  height:750px;
+  overflow-y: auto;
   background-color: rgba(206, 222, 221, 0.5);
   filter:blur(0px);
-   /* opacity:50%;  */
-  /* margin-left: 15%; */
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+   /* opacity:50%;  
+   margin-left: 15%; */
   border-radius: 17px;
 }
 form h1{
@@ -1410,11 +1425,165 @@ form h1 span{
   color:rgba(255, 255, 255, 1);
   font-weight: 400;
 }
+form input{
+width:70%;
+min-height:40px;
+border-radius:8px;
+border:1.5px solid black;
+background-color: rgba(255, 255, 255, 0.3);
+font-family: "Poppins", serif;   
+font-size: 20px;
+font-weight: 400;
+text-align: center;
+margin-top:10px;
+margin-bottom:10px;
+}
 
+.address{
+  min-height:100px;
+}
 
+.aadhar,.image,.expertise,.qualification,.dl{
+  width:70%;
 
+}
+.aadhar input,.image input,.expertise select,.qualification input,.dl select{
+  width:100%;
+  text-align:center ;
+  padding-top:5px;
+  padding-bottom:5px;
 
+}
+ form label{
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: "Poppins", serif;   
+font-size: 13px;
+font-weight: 400;
+text-align: center;
+border-radius:8px;
+padding:5px 10px 3px 10px;
+}
+form select{
+  width:70%;
+min-height:40px;
+border-radius:8px;
+border:1.5px solid black;
+background-color: rgba(255, 255, 255, 0.3);
+font-family: "Poppins", serif;   
+font-size: 20px;
+font-weight: 400;
+text-align: center;
+margin-top: 10px;
+}
+.schedule{
+  width:3%;
+}
+.form-group{
+  width:70%;
+}
+.checkbox-group{
+  width:100%;
+  /* background-color: rgba(255, 255, 255, 0.3); */
+}
+.checkbox-group label{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  height:20px;
+  margin-bottom:2px;
+  
+}
+.submit{
+  width:170px;
+  min-height:45px;
+  background-color: rgba(0, 125, 163, 1);
+  font-family: "Poppins", serif;   
+font-size: 20px;
+font-weight: 500;
+color:white;
+border-radius:12px;
+margin-bottom:10px;
+margin-top:10px;
+box-shadow:-5px 9px 4px 0px rgba(15, 73, 78, 0.25);
+}
+@media screen and (max-width:1233px){
+  .bethe,.allthree span{
+    font-size:43px;
+  }
+  
+}
+@media screen and (max-width:982px){
+  .careimagetext{
+    flex-direction: column;
+  }
+  .bethe,.allthree span{
+    font-size:50px;
+  }
+}
+@media screen and (max-width:770px){
+  .registrationform{
+    flex-direction:column;
+  }
+  .careimage{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:440px;
+    width:100%;
+    margin-right:0;
+    margin-left:0;
+  }
+  .formimage{
+    width:100%;
+    margin-right:0;
+    margin-left:0;
+  }
+  .careimagetext{
+    flex-direction:row;
+    margin-left:10%;
+    padding:0;
+    flex-wrap: wrap;
+  }
+  .bethe,.allthree span{
+    font-size:57px;
+  }
 
+}
+@media screen and (max-width:500px){
+  form input{
+    font-size:15px;
+  }
+  form select{
+    font-size:15px;
+  }
+  .bethe,.allthree span{
+    font-size:35px;
+  }
+  .schedule{
+    width:7%;
+  }
+  .allthree{
+    height:53px;
+  }
+  @keyframes slide{
+    0%{
+      transform:translatey(0);
+  
+    }
+    33.33% {
+      transform: translateY(-10%); 
+    }
+    50% {
+      transform: translateY(-80%); 
+    }
+    83.33% {
+      transform: translateY(-100%); 
+    }
+    100% {
+      transform: translateY(-200%); 
+    }
+}
+}
 
 
 
