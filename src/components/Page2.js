@@ -12,7 +12,7 @@ export default function Page2() {
         <li>Professional Background Verification</li>
         <li>Fraud Prevention Measures </li>
       </ul>
-    <Link to ="/registration"><button className="app1">Start</button></Link>
+    <Link to ="/Registration"><button className="app1">Start</button></Link>
 
     </div>
     <div className="client">

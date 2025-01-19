@@ -17,7 +17,7 @@ function App() {
       
       <Routes>
       <Route path="/" element={<Fullpage/>} />
-      <Route path="/registration" element={<Registration/>} />
+      <Route path="/Registration" element={<Registration/>} />
       {/* <Route path="/page2" element={<Page2/>} />
       <Route path="/page3" element={<Page3/>} />
       <Route path="/" element={<Page1/>} /> */}

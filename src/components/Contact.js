@@ -56,9 +56,13 @@ export default function Contact() {
               setStatus("Failed to send email. Please try again later.");
             }
           );
-          setName("")
-          setEmail("")
-          setMessage("")
+          const updatename="Full Name"
+          const updateemail="Email Address"
+          const updatemessage="Enter your Message"
+
+          setName(updatename)
+          setEmail(updateemail)
+          setMessage(updatemessage)
           setRobot(false)
         }
   return (

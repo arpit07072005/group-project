@@ -14,7 +14,7 @@ const handlemenuclose=()=>{
   return (
     <>
     <div className="navbar">
-      <p>Care<span className="logo">Connect</span></p>
+     <Link to="/"><p>Care<span className="logo">Connect</span></p></Link> 
       <ul className="navli remove">
        <Link to="/"><li>Home</li></Link> 
        <a href ="#page2"> <li>About Us</li></a>
